@@ -1,0 +1,11 @@
+version: "3.7"
+services:
+  web:
+    build: .
+    ports:
+      - "9000:3000"
+    secrets:
+      - MONGO_URI
+secrets:
+  MONGO_URI:
+    file: ./config/docker_secrets/MONGO_URI.txt
